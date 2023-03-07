@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Motor Hesabı</title>
+</head>
+<body>
+    <script>
+        //P=(yük*hız*emniyet katsayısı*yerçekimi ivmesi)/(1000*verim)
+        let yuk= parseFloat(prompt("Yük bilgisini kg cinsinden giriniz."));
+        let hiz= parseFloat(prompt("Hız bilgisini m/s cinsinden giriniz."));
+        let verim= parseFloat(prompt("Verim bilgisini 0-1 arası giriniz."));
+
+        let guc= (yuk*hiz*1.2*9.81)/(1000*verim);
+        guc=guc.toFixed(2);
+        alert("Hesaplanan minimum motor kw'sı "+ guc);
+    </script>
+</body>
+</html>
